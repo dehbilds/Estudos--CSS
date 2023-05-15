@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #ab226d;
+    position: relative;
+    animation: surgir 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    animation-direction: alternate;
+}
+
+.logo .maiorq {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.logo .maiorq::after,
+.logo .maiorq::before {
+    content: "";
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo .maiorq::before {
+    width: 8px;
+    height: 30px;
+    left: initial;
+    right: 0;
+}
+
+.logo .underline {
+    width: 30px;
+    height: 8px;
+    /* background-color: white; */
+    position: absolute;
+    top: 50%;
+    left: 55px;
+}
+
+.logo .underline::after,
+.logo .underline::before {
+    content: "";
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    animation: piscar 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+.logo .underline::before {
+    /* right: initial; */
+    transform: translateY(-145%) rotate(-45deg);
+}
+
+.logo .underline::after {
+    /* right: initial; */
+    transform: translateY(65%) rotate(45deg);
+}
+
+
+@keyframes piscar {
+    0% {}
+
+    100% {
+        transform: translateY(15px);
+        width: 25px;
+        height: 7px;
+    }
+}
+
+@keyframes surgir {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        width: 100px;
+        height: 100px;
+    }
+}
