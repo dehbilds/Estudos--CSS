@@ -70,10 +70,10 @@ body {
     top: 0;
     left: 0;
     transform-origin: center;
-    animation: piscar 2s;
-    animation-delay: 2s;
+    animation: piscar 3s;
+    animation-delay: 5s;
     animation-iteration-count: infinite;
-    /* animation-direction: alternate; */
+    animation-direction: alternate;
 }
 
 .logo .underline::before {
